@@ -1,17 +1,13 @@
 package com.mkolongo.grocery_store.domain.models.binding;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class MerchantBindingModel {
 
-    private String name;
-    private String logoUrl;
+    private final String name;
+    private final String logoUrl;
 
-    public MerchantBindingModel(String name, String logoUrl) {
-        this.name = name;
-        this.logoUrl = logoUrl;
-    }
 }

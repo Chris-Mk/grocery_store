@@ -15,7 +15,7 @@ import java.time.Duration;
 @Configuration
 public class AppBeanConfig {
     private static final String DRIVER_NAME = "webdriver.chrome.driver";
-    private static final String DRIVER_PATH = "src/main/resources/misc/chromedriver.exe";
+    private static final String DRIVER_PATH = "C:/Users/User/OneDrive/Desktop/chromedriver.exe";
 
     @Bean
     public WebDriver driver() {

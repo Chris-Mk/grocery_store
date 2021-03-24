@@ -7,9 +7,7 @@ import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -32,6 +30,6 @@ public class Product extends BaseEntity {
     @Column(nullable = false)
     private String category;
 
-    @OneToMany(mappedBy = "product")
-    private Set<MerchantProduct> merchantsProducts;
+//    @OneToMany(mappedBy = "product")
+//    private Set<MerchantProduct> merchantsProducts;
 }
