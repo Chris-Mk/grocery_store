@@ -22,6 +22,7 @@ public class WillysProductParser implements ProductParser {
             ProductBindingModel bindingModel = new ProductBindingModel();
             String[] data = p.getText().split("\n");
 
+            // 2 for
             if (data[0].contains(" ") && Character.isDigit(data[0].charAt(0))) {
                 double price = Double.parseDouble(data[1] + "." + data[2]);
                 bindingModel.setPrice(BigDecimal.valueOf(price));
@@ -29,11 +30,13 @@ public class WillysProductParser implements ProductParser {
 
                 if ("VÄLJ & BLANDA".equals(data[3])) {
                     bindingModel.setName(data[4] + " " + data[5]);
+                    bindingModel.setDescription(buildDescription(data, 6).toString());
                 } else {
                     bindingModel.setName(data[3] + " " + data[4]);
+                    bindingModel.setDescription(buildDescription(data, 5).toString());
                 }
 
-                bindingModel.setDescription(buildDescription(data, 5).toString());
+                // spara
             } else if (Character.isLetter(data[0].charAt(0))) {
                 double price = Double.parseDouble(data[1] + "." + data[2]);
                 bindingModel.setPrice(BigDecimal.valueOf(price));

@@ -20,7 +20,7 @@ public class MerchantServiceImpl implements MerchantService {
         String merchantName = merchantBindingModel.getName();
 
         if (doesMerchantExist(merchantName)) {
-            getMerchantByName(merchantName);
+            return getMerchantByName(merchantName);
         }
 
         return merchantRepository.save(mapper.map(merchantBindingModel, Merchant.class));
