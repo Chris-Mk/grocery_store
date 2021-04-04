@@ -35,4 +35,7 @@ public class MerchantProduct {
 
     @Column(nullable = false)
     private String units;
+
+    @Column(nullable = false)
+    private boolean membership;
 }
